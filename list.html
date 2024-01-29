@@ -8,13 +8,17 @@
             <th>Phone</th>
         </tr>
         </thead>
-        <tbody> {{ range . }} {{ if .WillAttend }}
-        <tr>
-            <td>{{ .Name }}</td>
-            <td>{{ .Email }}</td>
-            <td>{{ .Phone }}</td>
-        </tr>
-        {{ end }} {{ end }}
+        <tbody>
+        {{ range . }}
+            {{ if .WillAttend }}
+                <tr>
+                    <td>{{ .Name }}</td>
+                    <td>{{ .Email }}</td>
+                    <td>{{ .Phone }}</td>
+                </tr>
+            {{ end }}
+        {{ end }}
         </tbody>
     </table>
-</div> {{ end }}
+</div>
+{{ end }}
