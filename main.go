@@ -41,4 +41,9 @@ func main() {
 
 	http.HandleFunc("/", welcomeHandler)
 	http.HandleFunc("/list", listHandler)
+
+	err := http.ListenAndServe(":5000", nil)
+	if err != nil {
+		fmt.Println(err)
+	}
 }
